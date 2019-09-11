@@ -19,6 +19,11 @@ services:
     container_name: wordpress
     image: youngmikelo/cko-wordpress
     restart: always
+    environment:
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
     ports:
       - 80:80
     depends_on:
